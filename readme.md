@@ -113,6 +113,72 @@ git checkout [nome da branch]
 Para combinar as alterações de uma branch na sua branch atual, use `git merge`:
 \`\`\`bash
 git merge [nome da branch]
+
+\`\`\`
+# .gitignore
+
+O arquivo `.gitignore` é um arquivo de texto que diz ao Git quais arquivos ou pastas ele deve ignorar em um projeto. 
+
+## Como usar .gitignore
+
+1. **Criar um arquivo .gitignore**: Crie um arquivo de texto e dê a ele o nome de `.gitignore` (lembre-se de incluir o `.` no começo).
+
+\`\`\`
+echo pasta/ >> .gitignore
+\`\`\`
+
+
+2. **Editar o .gitignore**: Cada nova linha deve listar um arquivo ou pasta adicional que você quer que o Git ignore. As entradas neste arquivo também podem seguir um padrão de correspondência.
+
+Exemplo de um arquivo .gitignore:
+
+\`\`\`bash
+# Ignore os arquivos de sistema do Mac
+.DS_Store
+
+# Ignore a pasta node_modules
+node_modules
+
+# Ignore todos os arquivos de texto
+*.txt
+
+# Ignore arquivos relacionados às chaves de API
+.env
+
+# Ignore arquivos de configuração de SASS
+.sass-cache
+
+\`\`\`
+
+3. **Adicionar ou alterar seu arquivo .gitignore global**: Execute este comando:
+
+\`\`\`bash
+git config --global core.excludesfile ~/.gitignore_global
+\`\`\`
+
+Isso criará o arquivo `~/.gitignore_global`. Agora, você pode editar esse arquivo do mesmo modo que faz com um arquivo .gitignore local.
+
+## Como remover arquivos enviados anteriormente por commit a partir de um novo Gitignore
+
+Para remover um único arquivo, ou seja, para parar de rastrear o arquivo, mas não excluir esse arquivo do sistema, use:
+
+\`\`\`bash
+git rm --cached filename
+\`\`\`
+
+Para parar de rastrear todos os arquivos no .gitignore:
+
+\`\`\`bash
+git rm -r --cached
+git add .
+git commit -m ".gitignore agora está funcionando"
+\`\`\`
+
+
+# Importante
+Se os arquivos que você parou de ignorar já foram rastreados pelo Git antes de serem adicionados ao .gitignore, você precisará desfazer o rastreamento desses arquivos. Você pode fazer isso com o seguinte comando:
+\`\`\`
+git rm --cached <nome do arquivo>
 \`\`\`
 
 # Links para Conteúdo sobre Markdown
