@@ -160,7 +160,7 @@ Se você cometeu uma pasta ou arquivo que não deveria estar no Git, você pode 
     git commit -m "Removendo <nome da pasta>"
     ```
 	
-# Git  stash
+# Git stash
 O comando git stash é usado para salvar temporariamente as alterações que você fez no seu repositório, mas que você não quer commitar ainda. Aqui está um exemplo de como você pode usar este comando:
 
     ```bash
@@ -171,6 +171,29 @@ Este comando irá salvar as suas alterações em uma nova pilha de stashes. Voc�
 Se você quiser ver uma lista de todos os seus stashes, você pode usar o comando git stash list. E se você quiser descartar o stash mais recente, você pode usar o comando git stash drop.
 
 Por favor, note que git stash é uma maneira útil de limpar a sua área de trabalho sem ter que commitar as alterações que você não está pronto para commitar ainda. Isso pode ser útil se você precisar mudar para uma ramificação diferente ou se você quiser salvar as suas alterações para mais tarde, mas você não quer commitá-las ainda.
+## Git Stash Pop e Apply
+
+Os comandos git stash apply e git stash pop são usados para recuperar as alterações salvas com o comando git stash. Aqui está como você pode usar esses comandos:
+
+```bash
+git stash apply
+```
+
+O comando `git stash apply` reaplica as alterações do último stash no seu repositório. Isso é útil se você quiser continuar trabalhando nas alterações que você stashed anteriormente. Note que este comando não remove o stash da sua lista de stashes. Para remover o stash, você precisará usar o comando `git stash drop`.
+
+```bash
+git stash pop
+```
+
+O comando git stash pop faz a mesma coisa que `git stash apply`, mas também remove o stash da sua lista de stashes. Isso é útil se você sabe que não vai precisar do stash novamente.
+
+Por favor, note que ambos os comandos só afetam o stash mais recente. Se você tiver vários stashes e quiser aplicar um stash que não seja o mais recente, você precisará fornecer o nome do stash como argumento para o comando git stash apply ou git stash pop. Por exemplo:
+
+```bash
+git stash apply stash@{2}
+```
+
+Neste exemplo, `stash@{2}` é o nome do stash que você quer aplicar. Este comando irá aplicar esse stash específico ao seu repositório.
 
 
 # Git Reset
