@@ -113,8 +113,146 @@ git checkout [nome da branch]
 Para combinar as alterações de uma branch na sua branch atual, use `git merge`:
 \`\`\`bash
 git merge [nome da branch]
+\`\`\`
+
+# Removendo uma Pasta ou Arquivo de um Commit Git
+
+Se você cometeu uma pasta ou arquivo que não deveria estar no Git, você pode removê-los do histórico do Git. Aqui estão os passos:
+
+## Removendo um Arquivo
+
+1. **Remova o arquivo do Git**: Use o comando `git rm --cached` seguido pelo nome do arquivo que você deseja remover do Git, mas manter no seu diretório de trabalho.
+
+    ```bash
+    git rm --cached <nome do arquivo>
+    ```
+
+2. **Commit suas alterações**: Depois de remover o arquivo, você precisa fazer um commit para aplicar essa mudança ao seu histórico do Git
+
+    ```bash
+    git commit -m "Removendo <nome do arquivo>"
+    ```
+
+## Removendo uma Pasta
+
+1. **Remova a pasta do Git**: Use o comando `git rm -r --cached` seguido pelo nome da pasta que você deseja remover do Git, mas manter no seu diretório de trabalho.
+
+    ```bash
+    git rm -r --cached <nome da pasta>
+    ```
+
+2. **Commit suas alterações**: Assim como ao remover um arquivo, você precisa fazer um commit para aplicar essa mudança ao seu histórico do Git.
+
+    ```bash
+    git commit -m "Removendo <nome da pasta>"
+    ```
 
 \`\`\`
+
+# Git Reset
+
+O comando `git reset` é usado para desfazer alterações. Ele tem três formas principais de invocação que correspondem aos argumentos `--soft`, `--mixed`, `--hard`.
+
+## Soft Reset
+
+O `git reset --soft` move o ponteiro `HASH` para outro commit e deixa o diretório de trabalho e o índice inalterados. Isso é útil se você quiser alterar o último commit.
+
+\`\`\`bash
+git reset --soft HASH
+\`\`\`
+
+## Mixed Reset
+
+O `git reset --mixed` é o padrão. Ele move o ponteiro `HASH` e atualiza o índice para corresponder ao estado do novo `HASH`. O diretório de trabalho não é alterado.
+
+\`\`\`bash
+git reset --mixed HASH
+\`\`\`
+
+## Hard Reset
+
+O `git reset --hard` move o ponteiro `HASH`, atualiza o índice e modifica o diretório de trabalho para corresponder ao estado do novo `HASH`. Isso descarta todas as alterações desde o último commit e apaga todos os aqruivos criados que estavam no commit que foi excluido.
+
+\`\`\`bash
+git reset --hard HASH
+\`\`\`
+
+## Compreendendo a diferença entre Git Reset Soft e Mixed
+
+### git reset --soft
+Esta opção move o ponteiro **HEAD** para o commit especificado. No entanto, mantém as alterações no índice (área de preparação) e na área de trabalho. Isso significa que os arquivos que foram modificados serão mantidos como "alterações a serem confirmadas" (staged changes), prontos para serem confirmados no próximo commit.
+
+### git reset --mixed
+Esta é a opção padrão para o comando reset. Assim como a opção `--soft`, ela move o ponteiro **HEAD** para o commit especificado. No entanto, ao contrário da opção `--soft`, ela também atualiza o índice para corresponder ao conteúdo do commit especificado. Isso significa que as alterações que foram preparadas (staged) serão desfeitas, e os arquivos modificados aparecerão como "alterações não preparadas" (unstaged changes). Você precisará usar `git add` novamente antes de poder confirmar essas alterações.
+
+
+\`\`\`
+
+
+## Git Reflog
+
+O comando `git reflog` gerencia as informações registradas nos "reflogs". Os "reflogs" registram quando as pontas dos ramos e outras referências são atualizadas no repositório local.
+
+### Função Básica
+
+A função mais básica do `git reflog` é a invocação: `git reflog`. Em resumo, é um atalho equivalente a: `git reflog show HEAD`. Este comando vai emitir o reflog do `HEAD`.
+
+### Subcomandos
+
+- `git reflog show [log-options] [<ref>]`: Exibe o registro log da referência informada através da linha de comando (ou pela predefinição, `HEAD`). O "reflog" cobre todas as ações recentes.
+- `git reflog expire [--expire=<time>] [--expire-unreachable=<time>] [--rewrite] [--updateref] [--stale-fix]`: Remove as entradas mais antigas do "reflog". As entradas serão removidas do "reflog" caso tenham o tempo anterior ao expire ou expire-unreachable[^1^][1].
+- `git reflog delete [--rewrite] [--updateref] [--dry-run | -n] [--verbose] ref@{specifier}`: Exclui as entradas únicas do reflog.
+- `git reflog exists <ref>`: Verifica se uma "ref" tem um reflog.
+
+Os "reflogs" são úteis para especificar o valor antigo de uma referência em vários comandos Git.
+
+
+\`\`\`
+# Alterando a Mensagem do Último Commit no Git
+
+Se você cometeu um erro na mensagem do seu último commit ou simplesmente quer alterá-la, você pode fazer isso usando o comando `git commit --amend`. Aqui estão os passos:
+
+
+1. **Altere a mensagem do último commit**: Use o comando `git commit --amend` para alterar a mensagem do último commit. Isso abrirá um editor de texto no terminal mostrando a mensagem do último commit e permitindo que você a altere.
+
+    ```bash
+    git commit --amend
+    ```
+
+2. **Salve e saia: Depois de alterar a mensagem do commit, salve e saia do editor de texto. No Vim, por exemplo, você pode fazer isso pressionando `Esc`, digitando `:wq` e pressionando `Enter`.
+
+3. **Verifique a nova mensagem do commit**: Você pode usar o comando `git log` para ver o histórico de commits e confirmar que a mensagem do último commit foi alterada corretamente.
+
+    ```bash
+    git log
+    ```
+\`\`\`
+
+
+# Restaurando um Arquivo com Git Restore
+
+O comando `git restore` é usado para descartar alterações no diretório de trabalho. Aqui estão os passos para restaurar um arquivo:
+
+1. **Verifique o status do seu repositório**: Antes de restaurar um arquivo, é uma boa ideia verificar o status do seu repositório com `git status`. Isso mostrará quais arquivos foram modificados.
+
+    ```bash
+    git status
+    ```
+
+2. **Restaure o arquivo**: Use o comando `git restore` seguido pelo nome do arquivo que você deseja restaurar.
+
+    ```bash
+    git restore <nome do arquivo>
+    ```
+
+Por favor, substitua `<nome do arquivo>` pelo nome do arquivo que você deseja restaurar.
+
+## Nota Importante
+
+O comando `git restore` irá restaurar o arquivo para o último estado commitado, descartando todas as alterações não commitadas que foram feitas desde então. Se você quiser manter essas alterações, considere commitá-las antes de usar `git restore`
+
+\`\`\`
+
 # .gitignore
 
 O arquivo `.gitignore` é um arquivo de texto que diz ao Git quais arquivos ou pastas ele deve ignorar em um projeto. 
@@ -126,7 +264,6 @@ O arquivo `.gitignore` é um arquivo de texto que diz ao Git quais arquivos ou p
 \`\`\`
 echo pasta/ >> .gitignore
 \`\`\`
-
 
 2. **Editar o .gitignore**: Cada nova linha deve listar um arquivo ou pasta adicional que você quer que o Git ignore. As entradas neste arquivo também podem seguir um padrão de correspondência.
 
