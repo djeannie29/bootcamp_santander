@@ -29,7 +29,9 @@ Na linha de comando, digite
 ```bash
 git add .
 ```
- para adicionar todas as alterações, depois ```bash git commit -m "[mensagem de commit]"``` para commitar suas alterações.
+Para adicionar todas as alterações e  commitar.
+```bash git commit -m "[mensagem de commit]"``` 
+
 
 ### 6. Push suas alterações
 Digite ```bash git push origin [nome da branch]``` para enviar suas alterações para o GitHub.
