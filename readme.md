@@ -370,6 +370,21 @@ Se os arquivos que você parou de ignorar já foram rastreados pelo Git antes de
 git rm --cached <nome do arquivo>
 ```
 
+
+# Comando Git Fetch
+
+O comando `git fetch` é usado para buscar todas as ramificações e commits do repositório remoto que não estão presentes no repositório local. Aqui está um exemplo de como você pode usar este comando:
+
+```bash
+git fetch origin```
+
+Neste exemplo, origin é o nome padrão que o Git dá ao servidor de onde você clonou originalmente.
+
+O git fetch não mescla automaticamente as alterações no seu repositório local. Para incorporar as alterações, você precisará usar o comando git merge ou git pull (que é essencialmente um fetch seguido por um merge).
+
+
+
+
 # Links para Conteúdo sobre Markdown
 
 [1.O Guia Definitivo de MarkDown para Iniciantes](https://github.com/mende1/guia-definitivo-de-markdown)
