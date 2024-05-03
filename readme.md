@@ -39,7 +39,11 @@ git commit -m "[mensagem de commit]"
 
 
 ### 6. Push suas alterações
-Digite ```bash git push origin [nome da branch]``` para enviar suas alterações para o GitHub.
+Digite o comando abaixo para enviar suas alterações.
+
+```bash 
+git push origin [nome da branch]
+``` 
 
 ### 7. Abra um Pull Request
 No GitHub, vá para a página do seu repositório e clique em 'Pull request' e depois em 'New pull request'.
