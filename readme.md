@@ -385,7 +385,24 @@ Neste exemplo, origin é o nome padrão que o Git dá ao servidor de onde você 
 O git fetch não mescla automaticamente as alterações no seu repositório local. Para incorporar as alterações, você precisará usar o comando git merge ou git pull (que é essencialmente um fetch seguido por um merge).
 
 
+# Comando Git Diff
 
+O comando `git diff` é usado para mostrar as diferenças entre commits, commit e árvore de trabalho, etc. Aqui está um exemplo de como você pode usar este comando:
+
+```bash
+git diff
+```
+Este comando mostrará as diferenças entre o seu índice (ou seja, a sua área de preparação) e a sua cópia de trabalho. Isso mostra quais alterações você fez desde o último commit que ainda não foram preparadas para o próximo commit.
+
+Se você quiser ver as diferenças entre dois commits específicos, você pode fazer isso fornecendo os hashes de commit para o comando git diff. Por exemplo:
+
+Exemplo:
+```bash
+git diff 12345abc..67890def
+```
+Neste exemplo, 12345abc e 67890def são os hashes dos commits que você quer comparar. Este comando irá mostrar as diferenças entre esses dois commits.
+
+Por favor, note que git diff não faz alterações no seu repositório. Ele apenas mostra as diferenças. Para aplicar as alterações, você precisará usar comandos como git add, git commit, etc.
 
 # Links para Conteúdo sobre Markdown
 
