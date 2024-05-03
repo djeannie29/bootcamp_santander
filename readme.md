@@ -93,7 +93,7 @@ git clone -b nome_do_ramo https://github.com/usuario/repositorio.git
 ou
 
 ```bash
-git clone https://github.com/usuario/repositorio.git --branch nome_do_ramo
+git clone https://github.com/usuario/repositorio.git --branch nome_do_ramo --single-branch
 ```
 
 
