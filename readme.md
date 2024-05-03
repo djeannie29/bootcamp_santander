@@ -26,13 +26,13 @@ Use seu editor de código favorito para fazer alterações no código.
 
 ### 5. Commit suas alterações
 Na linha de comando, digite 
-\`\`\`
+```bash
 git add .
-\`\`\`
- para adicionar todas as alterações, depois \`\`\`git commit -m "[mensagem de commit]"\`\`\` para commitar suas alterações.
+```
+ para adicionar todas as alterações, depois ```bash git commit -m "[mensagem de commit]"``` para commitar suas alterações.
 
 ### 6. Push suas alterações
-Digite \`\`\`git push origin [nome da branch]\`\`\` para enviar suas alterações para o GitHub.
+Digite ```bash git push origin [nome da branch]``` para enviar suas alterações para o GitHub.
 
 ### 7. Abra um Pull Request
 No GitHub, vá para a página do seu repositório e clique em 'Pull request' e depois em 'New pull request'.
@@ -49,34 +49,33 @@ Aqui estão alguns comandos úteis relacionados a branches no Git:
 
 ## Criar um novo branch
 Para criar um novo branch, use:
-\`\`\`bash
+```bash
 git branch [nome do branch]
-\`\`\`
+```
 
 ## Mudar para um branch existente
 Para mudar para um branch existente, use:
-\`\`\`bash
+```bash
 git checkout [nome do branch]
-\`\`\`
+```
 
 ## Criar um novo branch e mudar para ele ao mesmo tempo
 Para criar um novo branch e mudar para ele ao mesmo tempo, use:
-\`\`\`bash
+```bash
 git checkout -b [nome do branch]
-\`\`\`
+```
 
 ## Combinar as alterações de uma branch na sua branch atual (fazer um "merge")
 Para combinar as alterações de uma branch na sua branch atual, use `git merge`:
-`bash git merge [nome do branch]
-`
+```bash git merge [nome do branch]```
 
 
 # Fluxo de Trabalho do Git com Branches
 
-1. **Criar um novo branch**: `git branch [nome do branch]`
-2. **Mudar para um branch existente**: `git checkout [nome do branch]`
-3. **Criar um novo branch e mudar para ele ao mesmo tempo**: `git checkout -b [nome do branch]`
-4. **Combinar as alterações de uma branch na sua branch atual**: `git merge [nome do branch]`
+1. **Criar um novo branch**: ```bash git branch [nome do bra nch]```
+2. **Mudar para um branch existente**: ```bash git checkout [nome do branch]```
+3. **Criar um novo branch e mudar para ele ao mesmo tempo**: ```bash git checkout -b [nome do branch]```
+4. **Combinar as alterações de uma branch na sua branch atual**: ```bash git merge [nome do branch]```
 
 
 
@@ -84,34 +83,33 @@ Para combinar as alterações de uma branch na sua branch atual, use `git merge`
 
 ## Clonagem
 Para clonar um repositório existente, use:
-\`\`\`bash
+```bash
 git clone [URL do repositório]
-\`\`\`
+```
 
 ## Status
 Para verificar o status do seu repositório (por exemplo, quais alterações foram feitas), use:
-\`\`\`bash
+```bash
 git status
-\`\`\`
+```
 
 ## Commit
 Para commitar suas alterações, primeiro adicione as alterações com `git add`, depois commit com uma mensagem descritiva:
-\`\`\`bash
+```bash
 git add .
 git commit -m "[mensagem de commit]"
-\`\`\`
+```
 
 ## Push
 Depois de commitar suas alterações, você pode enviá-las para o repositório remoto com `git push`:
-\`\`\`bash
+```bash
 git push origin [nome da branch]
-\`\`\`
-
+```
 ## Pull
 Para atualizar seu repositório local com as últimas alterações do repositório remoto, use `git pull`:
-\`\`\`bash
+```bash
 git pull origin [nome da branch]
-\`\`\`
+```
 
 ## Branches
 Para criar uma nova branch, use `git branch`. Para alternar entre branches, use `git checkout`:
@@ -163,7 +161,6 @@ Se você cometeu uma pasta ou arquivo que não deveria estar no Git, você pode 
     git commit -m "Removendo <nome da pasta>"
     ```
 
-\`\`\`
 
 # Git Reset
 
@@ -206,7 +203,7 @@ Aqui está um exemplo de como você pode usar este comando:
 git restore --staged <file>
 ```
 
-\`\`\`
+
 
 ## Compreendendo a diferença entre Git Reset Soft e Mixed
 
@@ -217,8 +214,6 @@ Esta opção move o ponteiro **HEAD** para o commit especificado. No entanto, ma
 Esta é a opção padrão para o comando reset. Assim como a opção `--soft`, ela move o ponteiro **HEAD** para o commit especificado. No entanto, ao contrário da opção `--soft`, ela também atualiza o índice para corresponder ao conteúdo do commit especificado. Isso significa que as alterações que foram preparadas (staged) serão desfeitas, e os arquivos modificados aparecerão como "alterações não preparadas" (unstaged changes). Você precisará usar `git add` novamente antes de poder confirmar essas alterações.
 
 
-
-\`\`\`
 
 
 ## Git Reflog
@@ -239,7 +234,6 @@ A função mais básica do `git reflog` é a invocação: `git reflog`. Em resum
 Os "reflogs" são úteis para especificar o valor antigo de uma referência em vários comandos Git.
 
 
-\`\`\`
 # Alterando a Mensagem do Último Commit no Git
 
 Se você cometeu um erro na mensagem do seu último commit ou simplesmente quer alterá-la, você pode fazer isso usando o comando `git commit --amend`. Aqui estão os passos:
@@ -257,8 +251,7 @@ Se você cometeu um erro na mensagem do seu último commit ou simplesmente quer 
 
     ```bash
     git log
-    ```
-\`\`\`
+```
 
 
 # Restaurando um Arquivo com Git Restore
@@ -283,7 +276,7 @@ Por favor, substitua `<nome do arquivo>` pelo nome do arquivo que você deseja r
 
 O comando `git restore` irá restaurar o arquivo para o último estado commitado, descartando todas as alterações não commitadas que foram feitas desde então. Se você quiser manter essas alterações, considere commitá-las antes de usar `git restore`
 
-\`\`\`
+
 
 # .gitignore
 
@@ -293,31 +286,41 @@ O arquivo `.gitignore` é um arquivo de texto que diz ao Git quais arquivos ou p
 
 1. **Criar um arquivo .gitignore**: Crie um arquivo de texto e dê a ele o nome de `.gitignore` (lembre-se de incluir o `.` no começo).
 
-\`\`\`
+```bash
 echo pasta/ >> .gitignore
-\`\`\`
+```
 
 2. **Editar o .gitignore**: Cada nova linha deve listar um arquivo ou pasta adicional que você quer que o Git ignore. As entradas neste arquivo também podem seguir um padrão de correspondência.
 
 Exemplo de um arquivo .gitignore:
 
-\`\`\`bash
+
 # Ignore os arquivos de sistema do Mac
+```bash
 .DS_Store
+```
 
 # Ignore a pasta node_modules
+```bash
 node_modules
+```
 
 # Ignore todos os arquivos de texto
+```bash
 *.txt
+```
 
 # Ignore arquivos relacionados às chaves de API
+```bash
 .env
+```
 
 # Ignore arquivos de configuração de SASS
+```bash
 .sass-cache
+```
 
-\`\`\`
+
 
 3. **Adicionar ou alterar seu arquivo .gitignore global**: Execute este comando:
 
@@ -331,9 +334,9 @@ Isso criará o arquivo `~/.gitignore_global`. Agora, você pode editar esse arqu
 
 Para remover um único arquivo, ou seja, para parar de rastrear o arquivo, mas não excluir esse arquivo do sistema, use:
 
-\`\`\`bash
+```bash
 git rm --cached filename
-\`\`\`
+```
 
 Para parar de rastrear todos os arquivos no .gitignore:
 
