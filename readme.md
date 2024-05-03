@@ -422,9 +422,11 @@ Por favor, note que git diff não faz alterações no seu repositório. Ele apen
 
 # Links para Conteúdo sobre Git e Markdown
 
-#GIT
+##GIT
 
 [GIT--local-branching-on-the-cheap] (https://git-scm.com/)
+
+
 ##MarkDown
 
 [O Guia Definitivo de MarkDown para Iniciantes](https://github.com/mende1/guia-definitivo-de-markdown)
