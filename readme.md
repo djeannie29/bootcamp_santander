@@ -177,6 +177,21 @@ O `git reset --hard` move o ponteiro `HASH`, atualiza o índice e modifica o dir
 git reset --hard HASH
 \`\`\`
 
+
+## Git Restore --staged
+
+O comando `git restore --staged` é usado para remover arquivos da área de preparação (Staging Area), mas mantém suas modificações reais intactas. Em outras palavras, ele copia o arquivo do commit `HEAD` para o índice, sem tocar na cópia do arquivo na área de trabalho.
+
+Isso significa que as alterações que foram preparadas (staged) serão desfeitas, e os arquivos modificados aparecerão como "alterações não preparadas" (unstaged changes). Você precisará usar `git add` novamente antes de poder confirmar essas alterações.
+
+Aqui está um exemplo de como você pode usar este comando:
+
+```bash
+git restore --staged <file>
+```
+
+\`\`\`
+
 ## Compreendendo a diferença entre Git Reset Soft e Mixed
 
 ### git reset --soft
@@ -184,6 +199,7 @@ Esta opção move o ponteiro **HEAD** para o commit especificado. No entanto, ma
 
 ### git reset --mixed
 Esta é a opção padrão para o comando reset. Assim como a opção `--soft`, ela move o ponteiro **HEAD** para o commit especificado. No entanto, ao contrário da opção `--soft`, ela também atualiza o índice para corresponder ao conteúdo do commit especificado. Isso significa que as alterações que foram preparadas (staged) serão desfeitas, e os arquivos modificados aparecerão como "alterações não preparadas" (unstaged changes). Você precisará usar `git add` novamente antes de poder confirmar essas alterações.
+
 
 
 \`\`\`
@@ -331,8 +347,7 @@ git rm --cached <nome do arquivo>
 
 # Fluxo de Trabalho do Git com Branches
 
-```mermaid
 graph TD;
-    A(Criar um novo branch: `git branch [nome do branch]`) --> B(Mudar para um branch existente: `git checkout [nome do branch]`);
-    B --> C(Criar um novo branch e mudar para ele ao mesmo tempo: `git checkout -b [nome do branch]`);
-    C --> D(Combinar as alterações de uma branch na sua branch atual: `git merge [nome do branch]`);
+    A["Criar um novo branch: git branch [nome do branch]"] --> B["Mudar para um branch existente: git checkout [nome do branch]"];
+    B --> C["Criar um novo branch e mudar para ele ao mesmo tempo: git checkout -b [nome do branch]"];
+    C --> D["Combinar as alterações de uma branch na sua branch atual: git merge [nome do branch]"];
