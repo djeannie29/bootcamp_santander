@@ -376,7 +376,9 @@ git rm --cached <nome do arquivo>
 O comando `git fetch` é usado para buscar todas as ramificações e commits do repositório remoto que não estão presentes no repositório local. Aqui está um exemplo de como você pode usar este comando:
 
 ```bash
-git fetch origin```
+git fetch origin
+```
+
 
 Neste exemplo, origin é o nome padrão que o Git dá ao servidor de onde você clonou originalmente.
 
