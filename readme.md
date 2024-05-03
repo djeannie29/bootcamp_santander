@@ -17,16 +17,19 @@ Acesse www.github.com e clique em 'Sign up'.
 Clique em '+' no canto superior direito e selecione 'New repository'. Nomeie seu repositório e clique em 'Create repository'.
 
 ### 3. Clone o repositório
-Na linha de comando, digite `git clone [URL do repositório]`.
+Na linha de comando, digite:
+ \`\`\`git clone [URL do repositório]\`\`\`
 
 ### 4. Faça alterações no código
 Use seu editor de código favorito para fazer alterações no código.
 
 ### 5. Commit suas alterações
-Na linha de comando, digite `git add .` para adicionar todas as alterações, depois `git commit -m "[mensagem de commit]"` para commitar suas alterações.
+Na linha de comando, digite 
+\`\`\`git add .\`\`\`
+ para adicionar todas as alterações, depois \`\`\`git commit -m "[mensagem de commit]"\`\`\` para commitar suas alterações.
 
 ### 6. Push suas alterações
-Digite `git push origin [nome da branch]` para enviar suas alterações para o GitHub.
+Digite \`\`\`git push origin [nome da branch]\`\`\` para enviar suas alterações para o GitHub.
 
 ### 7. Abra um Pull Request
 No GitHub, vá para a página do seu repositório e clique em 'Pull request' e depois em 'New pull request'.
