@@ -19,7 +19,10 @@ Clique em '+' no canto superior direito e selecione 'New repository'. Nomeie seu
 ### 3. Clone o repositório
 Na linha de comando, digite:
 
-```bash git clone [URL do repositório]```
+
+```bash
+git clone [URL do repositório]
+```
 
 ### 4. Faça alterações no código
 Use seu editor de código favorito para fazer alterações no código.
