@@ -117,12 +117,12 @@ Para criar uma nova branch, use `git branch`. Para alternar entre branches, use 
 git branch [nome da nova branch]```
 
 
-```
+```bash
 git checkout [nome da branch]
 ```
 
 ## Merge
-Para combinar as alterações de uma branch na sua branch atual, use `git merge`:
+Para combinar as alterações de uma branch na sua branch atual, use ```bash git merge```:
 
 
 ```bash
