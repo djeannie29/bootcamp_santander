@@ -258,10 +258,8 @@ Se você cometeu um erro na mensagem do seu último commit ou simplesmente quer 
 2. **Salve e saia: Depois de alterar a mensagem do commit, salve e saia do editor de texto. No Vim, por exemplo, você pode fazer isso pressionando `Esc`, digitando `:wq` e pressionando `Enter`.
 
 3. **Verifique a nova mensagem do commit**: Você pode usar o comando `git log` para ver o histórico de commits e confirmar que a mensagem do último commit foi alterada corretamente.
-
     ```bash
     git log```
-
 
 
 # Restaurando um Arquivo com Git Restore
