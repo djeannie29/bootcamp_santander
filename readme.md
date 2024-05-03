@@ -162,9 +162,9 @@ Se você cometeu uma pasta ou arquivo que não deveria estar no Git, você pode 
 	
 # Git Stash
 O comando git stash é usado para salvar temporariamente as alterações que você fez no seu repositório, mas que você não quer commitar ainda. Aqui está um exemplo de como você pode usar este comando:
-    ```bash
-    git stash
-    ```
+```bash
+git stash
+```
 Este comando irá salvar as suas alterações em uma nova pilha de stashes. Você pode voltar a estas alterações mais tarde usando o comando git stash apply.
 
 Se você quiser ver uma lista de todos os seus stashes, você pode usar o comando git stash list. E se você quiser descartar o stash mais recente, você pode usar o comando git stash drop.
