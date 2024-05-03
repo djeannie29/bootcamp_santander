@@ -19,7 +19,6 @@ Clique em '+' no canto superior direito e selecione 'New repository'. Nomeie seu
 ### 3. Clone o repositório
 Na linha de comando, digite:
 
-
 ```bash
 git clone [URL do repositório]
 ```
@@ -37,66 +36,12 @@ Para adicionar todas as alterações e  commitar.
 git commit -m "[mensagem de commit]" 
 ``` 
 
-
 ### 6. Push suas alterações
 Digite o comando abaixo para enviar suas alterações.
 
 ```bash 
 git push origin [nome da branch]
 ``` 
-
-
-# Branches no GitHub
-
-Um "branch" (ou "ramo", em português) no GitHub é essencialmente uma linha de desenvolvimento separada. Ele permite aos desenvolvedores trabalharem em recursos ou correções de bugs sem interferir diretamente no código principal do projeto. 
-
-Os branches isolam seu trabalho de desenvolvimento de outros branches do repositório. Por exemplo, você poderia usar um branch para desenvolver um novo recurso ou corrigir um erro. Você sempre cria um branch a partir de um branch existente.
-
-Aqui estão alguns comandos úteis relacionados a branches no Git:
-
-## Criar um novo branch
-Para criar um novo branch, use:
-```bash
-git branch [nome do branch]
-```
-
-## Mudar para um branch existente
-Para mudar para um branch existente, use:
-```bash
-git checkout [nome do branch]
-```
-
-## Criar um novo branch e mudar para ele ao mesmo tempo
-Para criar um novo branch e mudar para ele ao mesmo tempo, use:
-```bash
-git checkout -b [nome do branch]
-```
-
-## Combinar as alterações de uma branch na sua branch atual (fazer um "merge")
-Para combinar as alterações de uma branch na sua branch atual, use `git merge`:
-```bash git merge [nome do branch]```
-
-
-# Fluxo de Trabalho do Git com Branches
-
-1. **Criar um novo branch**: ```bash git branch [nome do bra nch]```
-2. **Mudar para um branch existente**: ```bash git checkout [nome do branch]```
-3. **Criar um novo branch e mudar para ele ao mesmo tempo**: ```bash git checkout -b [nome do branch]```
-4. **Combinar as alterações de uma branch na sua branch atual**: ```bash git merge [nome do branch]```
-
-
-# Comando Git Clone Branch
-Se você quiser clonar um ramo específico do repositório, você pode fazer isso adicionando a opção -b seguida pelo nome do ramo. Por exemplo:
-```bash
-git clone -b nome_do_ramo https://github.com/usuario/repositorio.git
-```
-ou
-
-```bash
-git clone https://github.com/usuario/repositorio.git --branch nome_do_ramo --single-branch
-```
-
-
 # Comandos Git
 
 ## Clonagem
@@ -128,27 +73,60 @@ Para atualizar seu repositório local com as últimas alterações do repositór
 ```bash
 git pull origin [nome da branch]
 ```
+# Branches no GitHub
+
+Um "branch" (ou "ramo", em português) no GitHub é essencialmente uma linha de desenvolvimento separada. Ele permite aos desenvolvedores trabalharem em recursos ou correções de bugs sem interferir diretamente no código principal do projeto. 
+
+Os branches isolam seu trabalho de desenvolvimento de outros branches do repositório. Por exemplo, você poderia usar um branch para desenvolver um novo recurso ou corrigir um erro. Você sempre cria um branch a partir de um branch existente.
+
+Aqui estão alguns comandos úteis relacionados a branches no Git:
 
 ## Branches
-Para criar uma nova branch, use `git branch`. 
 
+## Criar um novo branch
+Para criar um novo branch, use:
 ```bash
-git branch [nome da nova branch]
+git branch [nome do branch]
 ```
 
-Para alternar entre branches, use `git checkout`:
-
+## Mudar para um branch existente
+Para mudar para um branch existente, use:
 ```bash
-git checkout [nome da branch]
+git checkout [nome do branch]
 ```
 
-## Merge
-Para combinar as alterações de uma branch na sua branch atual, use ```bash git merge```:
+## Criar um novo branch e mudar para ele ao mesmo tempo
+Para criar um novo branch e mudar para ele ao mesmo tempo, use:
+```bash
+git checkout -b [nome do branch]
+```
 
+## Combinar as alterações de uma branch na sua branch atual (fazer um "merge")
+Para combinar as alterações de uma branch na sua branch atual, use `git merge`:
+```bash git merge [nome do branch]```
+
+
+
+# Fluxo de Trabalho do Git com Branches
+
+1. **Criar um novo branch**: ```bash git branch [nome do bra nch]```
+2. **Mudar para um branch existente**: ```bash git checkout [nome do branch]```
+3. **Criar um novo branch e mudar para ele ao mesmo tempo**: ```bash git checkout -b [nome do branch]```
+4. **Combinar as alterações de uma branch na sua branch atual**: ```bash git merge [nome do branch]```
+
+
+# Comando Git Clone Branch
+Se você quiser clonar um ramo específico do repositório, você pode fazer isso adicionando a opção -b seguida pelo nome do ramo. Por exemplo:
+```bash
+git clone -b nome_do_ramo https://github.com/usuario/repositorio.git
+```
+ou
 
 ```bash
-git merge [nome da branch]
+git clone https://github.com/usuario/repositorio.git --branch nome_do_ramo --single-branch
 ```
+
+
 
 # Removendo uma Pasta ou Arquivo de um Commit Git
 
@@ -181,6 +159,18 @@ Se você cometeu uma pasta ou arquivo que não deveria estar no Git, você pode 
     ```bash
     git commit -m "Removendo <nome da pasta>"
     ```
+	
+# Git  stash
+O comando git stash é usado para salvar temporariamente as alterações que você fez no seu repositório, mas que você não quer commitar ainda. Aqui está um exemplo de como você pode usar este comando:
+
+    ```bash
+    git stash
+    ```
+Este comando irá salvar as suas alterações em uma nova pilha de stashes. Você pode voltar a estas alterações mais tarde usando o comando git stash apply.
+
+Se você quiser ver uma lista de todos os seus stashes, você pode usar o comando git stash list. E se você quiser descartar o stash mais recente, você pode usar o comando git stash drop.
+
+Por favor, note que git stash é uma maneira útil de limpar a sua área de trabalho sem ter que commitar as alterações que você não está pronto para commitar ainda. Isso pode ser útil se você precisar mudar para uma ramificação diferente ou se você quiser salvar as suas alterações para mais tarde, mas você não quer commitá-las ainda.
 
 
 # Git Reset
@@ -225,7 +215,6 @@ git restore --staged <file>
 ```
 
 
-
 ## Compreendendo a diferença entre Git Reset Soft e Mixed
 
 ### git reset --soft
@@ -237,7 +226,7 @@ Esta é a opção padrão para o comando reset. Assim como a opção `--soft`, e
 
 
 
-## Git Reflog
+# Git Reflog
 
 O comando `git reflog` gerencia as informações registradas nos "reflogs". Os "reflogs" registram quando as pontas dos ramos e outras referências são atualizadas no repositório local.
 
@@ -273,7 +262,6 @@ Se você cometeu um erro na mensagem do seu último commit ou simplesmente quer 
     git log
 	```
 	
-
 
 # Restaurando um Arquivo com Git Restore
 
