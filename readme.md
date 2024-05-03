@@ -259,7 +259,9 @@ Se você cometeu um erro na mensagem do seu último commit ou simplesmente quer 
 
 3. **Verifique a nova mensagem do commit**: Você pode usar o comando `git log` para ver o histórico de commits e confirmar que a mensagem do último commit foi alterada corretamente.
     ```bash
-    git log```
+    git log
+	```
+	
 
 
 # Restaurando um Arquivo com Git Restore
