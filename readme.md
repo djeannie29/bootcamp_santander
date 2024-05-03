@@ -420,15 +420,20 @@ Neste exemplo, 12345abc e 67890def são os hashes dos commits que você quer com
 
 Por favor, note que git diff não faz alterações no seu repositório. Ele apenas mostra as diferenças. Para aplicar as alterações, você precisará usar comandos como git add, git commit, etc.
 
-# Links para Conteúdo sobre Markdown
+# Links para Conteúdo sobre Git e Markdown
 
-[1.O Guia Definitivo de MarkDown para Iniciantes](https://github.com/mende1/guia-definitivo-de-markdown)
+#GIT
 
-[2. Sintaxe básica de gravação e formatação no GitHub](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+[GIT--local-branching-on-the-cheap] (https://git-scm.com/)
+##MarkDown
 
-[3. Criando diagramas](https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)
+[O Guia Definitivo de MarkDown para Iniciantes](https://github.com/mende1/guia-definitivo-de-markdown)
 
-[4. Criando diagramas para o GitHub Docs](https://docs.github.com/pt/contributing/writing-for-github-docs/creating-diagrams-for-github-docs)
+[Sintaxe básica de gravação e formatação no GitHub](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+[Criando diagramas](https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)
+
+[Criando diagramas para o GitHub Docs](https://docs.github.com/pt/contributing/writing-for-github-docs/creating-diagrams-for-github-docs)
 
 
 
