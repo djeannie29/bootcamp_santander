@@ -18,7 +18,8 @@ Clique em '+' no canto superior direito e selecione 'New repository'. Nomeie seu
 
 ### 3. Clone o repositório
 Na linha de comando, digite:
- \`\`\`git clone [URL do repositório]\`\`\`
+
+```bash git clone [URL do repositório]```
 
 ### 4. Faça alterações no código
 Use seu editor de código favorito para fazer alterações no código.
@@ -114,16 +115,21 @@ git pull origin [nome da branch]
 
 ## Branches
 Para criar uma nova branch, use `git branch`. Para alternar entre branches, use `git checkout`:
-\`\`\`bash
-git branch [nome da nova branch]
+```bash
+git branch [nome da nova branch]```
+
+
+```
 git checkout [nome da branch]
-\`\`\`
+```
 
 ## Merge
 Para combinar as alterações de uma branch na sua branch atual, use `git merge`:
-\`\`\`bash
+
+
+```bash
 git merge [nome da branch]
-\`\`\`
+```
 
 # Removendo uma Pasta ou Arquivo de um Commit Git
 
@@ -167,30 +173,30 @@ O comando `git reset` é usado para desfazer alterações. Ele tem três formas 
 
 O `git reset --soft` move o ponteiro `HASH` para outro commit e deixa o diretório de trabalho e o índice inalterados. Isso é útil se você quiser alterar o último commit.
 
-\`\`\`bash
+```bash
 git reset --soft HASH
-\`\`\`
+```
 
 ## Mixed Reset
 
 O `git reset --mixed` é o padrão. Ele move o ponteiro `HASH` e atualiza o índice para corresponder ao estado do novo `HASH`. O diretório de trabalho não é alterado.
 
-\`\`\`bash
+```bash
 git reset --mixed HASH
-\`\`\`
+```
 
 ## Hard Reset
 
 O `git reset --hard` move o ponteiro `HASH`, atualiza o índice e modifica o diretório de trabalho para corresponder ao estado do novo `HASH`. Isso descarta todas as alterações desde o último commit e apaga todos os aqruivos criados que estavam no commit que foi excluido.
 
-\`\`\`bash
+```bash
 git reset --hard HASH
-\`\`\`
+```
 
 
 ## Git Restore --staged
 
-O comando `git restore --staged` é usado para remover arquivos da área de preparação (Staging Area), mas mantém suas modificações reais intactas. Em outras palavras, ele copia o arquivo do commit `HEAD` para o índice, sem tocar na cópia do arquivo na área de trabalho.
+O comando ```bash git restore --staged``` é usado para remover arquivos da área de preparação (Staging Area), mas mantém suas modificações reais intactas. Em outras palavras, ele copia o arquivo do commit `HEAD` para o índice, sem tocar na cópia do arquivo na área de trabalho.
 
 Isso significa que as alterações que foram preparadas (staged) serão desfeitas, e os arquivos modificados aparecerão como "alterações não preparadas" (unstaged changes). Você precisará usar `git add` novamente antes de poder confirmar essas alterações.
 
