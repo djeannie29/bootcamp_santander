@@ -203,7 +203,7 @@ git reset --hard HASH
 
 ## Git Restore --staged
 
-O comando ```bash git restore --staged``` é usado para remover arquivos da área de preparação (Staging Area), mas mantém suas modificações reais intactas. Em outras palavras, ele copia o arquivo do commit `HEAD` para o índice, sem tocar na cópia do arquivo na área de trabalho.
+O comando ` git restore --staged` é usado para remover arquivos da área de preparação (Staging Area), mas mantém suas modificações reais intactas. Em outras palavras, ele copia o arquivo do commit `HEAD` para o índice, sem tocar na cópia do arquivo na área de trabalho.
 
 Isso significa que as alterações que foram preparadas (staged) serão desfeitas, e os arquivos modificados aparecerão como "alterações não preparadas" (unstaged changes). Você precisará usar `git add` novamente antes de poder confirmar essas alterações.
 
