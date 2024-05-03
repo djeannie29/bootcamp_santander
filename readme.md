@@ -25,7 +25,9 @@ Use seu editor de código favorito para fazer alterações no código.
 
 ### 5. Commit suas alterações
 Na linha de comando, digite 
-\`\`\`git add .\`\`\`
+\`\`\`
+git add .
+\`\`\`
  para adicionar todas as alterações, depois \`\`\`git commit -m "[mensagem de commit]"\`\`\` para commitar suas alterações.
 
 ### 6. Push suas alterações
