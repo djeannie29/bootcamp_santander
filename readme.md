@@ -30,7 +30,9 @@ Na linha de comando, digite
 git add .
 ```
 Para adicionar todas as alterações e  commitar.
-```bash git commit -m "[mensagem de commit]"``` 
+```bash
+git commit -m "[mensagem de commit]" 
+``` 
 
 
 ### 6. Push suas alterações
