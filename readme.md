@@ -424,7 +424,7 @@ Por favor, note que git diff não faz alterações no seu repositório. Ele apen
 
 ##GIT
 
-[GIT--local-branching-on-the-cheap] (https://git-scm.com/)
+[GIT--local-branching-on-the-cheap](https://git-scm.com/)
 
 
 ##MarkDown
