@@ -1,7 +1,7 @@
 
 # RESUMO AULA GITHUB BOOTCAMP SANTANDER DIO
 
-Uma breve descrição sobre o que esse projeto faz e para quem ele é
+Resumo do conteúdo das aulas de GITHUB com algumas informações adicionais.
 
 # GitHub
 
@@ -66,9 +66,8 @@ git checkout -b [nome do branch]
 
 ## Combinar as alterações de uma branch na sua branch atual (fazer um "merge")
 Para combinar as alterações de uma branch na sua branch atual, use `git merge`:
-\`\`\`bash
-git merge [nome do branch]
-\`\`\`
+`bash git merge [nome do branch]
+`
 
 
 # Fluxo de Trabalho do Git com Branches
@@ -78,7 +77,7 @@ git merge [nome do branch]
 3. **Criar um novo branch e mudar para ele ao mesmo tempo**: `git checkout -b [nome do branch]`
 4. **Combinar as alterações de uma branch na sua branch atual**: `git merge [nome do branch]`
 
-\`\`\`
+
 
 # Comandos Git
 
