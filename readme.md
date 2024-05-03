@@ -66,8 +66,14 @@ git merge [nome do branch]
 \`\`\`
 
 
+# Fluxo de Trabalho do Git com Branches
 
+1. **Criar um novo branch**: `git branch [nome do branch]`
+2. **Mudar para um branch existente**: `git checkout [nome do branch]`
+3. **Criar um novo branch e mudar para ele ao mesmo tempo**: `git checkout -b [nome do branch]`
+4. **Combinar as alterações de uma branch na sua branch atual**: `git merge [nome do branch]`
 
+\`\`\`
 
 # Comandos Git
 
@@ -345,9 +351,4 @@ git rm --cached <nome do arquivo>
 [4. Criando diagramas para o GitHub Docs](https://docs.github.com/pt/contributing/writing-for-github-docs/creating-diagrams-for-github-docs)
 
 
-# Fluxo de Trabalho do Git com Branches
 
-graph TD;
-    A["Criar um novo branch: git branch [nome do branch]"] --> B["Mudar para um branch existente: git checkout [nome do branch]"];
-    B --> C["Criar um novo branch e mudar para ele ao mesmo tempo: git checkout -b [nome do branch]"];
-    C --> D["Combinar as alterações de uma branch na sua branch atual: git merge [nome do branch]"];
