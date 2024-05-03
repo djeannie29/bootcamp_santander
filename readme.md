@@ -165,11 +165,11 @@ O comando git stash é usado para salvar temporariamente as alterações que voc
 ```bash
 git stash
 ```
-Este comando irá salvar as suas alterações em uma nova pilha de stashes. Você pode voltar a estas alterações mais tarde usando o comando git stash apply.
+Este comando irá salvar as suas alterações em uma nova pilha de stashes. Você pode voltar a estas alterações mais tarde usando o comando `git stash apply`.
 
-Se você quiser ver uma lista de todos os seus stashes, você pode usar o comando git stash list. E se você quiser descartar o stash mais recente, você pode usar o comando git stash drop.
+Se você quiser ver uma lista de todos os seus stashes, você pode usar o comando `git stash list`. E se você quiser descartar o stash mais recente, você pode usar o comando `git stash drop`.
 
-Por favor, note que git stash é uma maneira útil de limpar a sua área de trabalho sem ter que commitar as alterações que você não está pronto para commitar ainda. Isso pode ser útil se você precisar mudar para uma ramificação diferente ou se você quiser salvar as suas alterações para mais tarde, mas você não quer commitá-las ainda.
+Por favor, note que `git stash` é uma maneira útil de limpar a sua área de trabalho sem ter que commitar as alterações que você não está pronto para commitar ainda. Isso pode ser útil se você precisar mudar para uma ramificação diferente ou se você quiser salvar as suas alterações para mais tarde, mas você não quer commitá-las ainda.
 
 ## Git Stash Pop e Apply
 
