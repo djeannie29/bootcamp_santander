@@ -112,10 +112,13 @@ git pull origin [nome da branch]
 ```
 
 ## Branches
-Para criar uma nova branch, use `git branch`. Para alternar entre branches, use `git checkout`:
-```bash
-git branch [nome da nova branch]```
+Para criar uma nova branch, use `git branch`. 
 
+```bash
+git branch [nome da nova branch]
+```
+
+Para alternar entre branches, use `git checkout`:
 
 ```bash
 git checkout [nome da branch]
