@@ -85,6 +85,17 @@ Para combinar as alterações de uma branch na sua branch atual, use `git merge`
 4. **Combinar as alterações de uma branch na sua branch atual**: ```bash git merge [nome do branch]```
 
 
+# Comando Git Clone Branch
+Se você quiser clonar um ramo específico do repositório, você pode fazer isso adicionando a opção -b seguida pelo nome do ramo. Por exemplo:
+```bash
+git clone -b nome_do_ramo https://github.com/usuario/repositorio.git
+```
+ou
+
+```bash
+git clone https://github.com/usuario/repositorio.git --branch nome_do_ramo
+```
+
 
 # Comandos Git
 
