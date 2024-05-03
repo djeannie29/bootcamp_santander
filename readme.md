@@ -45,10 +45,6 @@ Digite o comando abaixo para enviar suas alterações.
 git push origin [nome da branch]
 ``` 
 
-### 7. Abra um Pull Request
-No GitHub, vá para a página do seu repositório e clique em 'Pull request' e depois em 'New pull request'.
-
-
 
 # Branches no GitHub
 
