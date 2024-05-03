@@ -321,9 +321,9 @@ node_modules
 
 3. **Adicionar ou alterar seu arquivo .gitignore global**: Execute este comando:
 
-\`\`\`bash
+```bash
 git config --global core.excludesfile ~/.gitignore_global
-\`\`\`
+```
 
 Isso criará o arquivo `~/.gitignore_global`. Agora, você pode editar esse arquivo do mesmo modo que faz com um arquivo .gitignore local.
 
@@ -337,18 +337,18 @@ git rm --cached filename
 
 Para parar de rastrear todos os arquivos no .gitignore:
 
-\`\`\`bash
+```bash
 git rm -r --cached
 git add .
 git commit -m ".gitignore agora está funcionando"
-\`\`\`
+```
 
 
 # Importante
 Se os arquivos que você parou de ignorar já foram rastreados pelo Git antes de serem adicionados ao .gitignore, você precisará desfazer o rastreamento desses arquivos. Você pode fazer isso com o seguinte comando:
-\`\`\`
+```bash
 git rm --cached <nome do arquivo>
-\`\`\`
+```
 
 # Links para Conteúdo sobre Markdown
 
